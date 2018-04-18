@@ -21,7 +21,7 @@ public class Exam {
 	// te tellen in de gegeven string
 	// 1 punt
 	public int countLowercaseCharacters(String string) {
-
+        return (int)string.chars().filter((s)->Character.isLowerCase(s)).count();
 	}
 	
 	// Maak gebruik van lambdas en streams om de som van alle
