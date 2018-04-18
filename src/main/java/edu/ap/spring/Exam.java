@@ -14,8 +14,14 @@ public class Exam {
 	// priemgetallen terug te geven
 	// 2 punten
 	public int[] getPrimes(int[] numbers) {
-
-	}
+        return IntStream.of(numbers).filter((n) -> {
+            for(int i=2;i<n;i++) {
+                if(n%i==0)
+                    return false;
+            }
+            return true;
+        }).toArray();
+    }
 	
 	// Maak gebruik van lambdas en streams alle lowercase characters
 	// te tellen in de gegeven string
