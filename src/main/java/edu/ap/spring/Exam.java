@@ -28,7 +28,7 @@ public class Exam {
 	// x-coordinaten uit de lijst van points te berekenen
 	// 1 punt
 	public int sumOfX(List<Point> points) {
-
+        return points.stream().mapToInt(p -> p.x).sum();
 	}
 	
 	// Maak gebruik van lambdas en streams om een comma-separated
