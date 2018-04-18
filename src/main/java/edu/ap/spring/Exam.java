@@ -36,6 +36,10 @@ public class Exam {
 	// zijn aan twee
 	// 2 punten
 	public String getXOverTwo(List<Point> points) {
-		
+		return points.stream()
+                .map( p -> p.x )
+                .filter((x) -> x >= 2)
+                .map( x -> Integer.toString(x))
+                .collect(Collectors.joining( "," ));
 	}
 }
